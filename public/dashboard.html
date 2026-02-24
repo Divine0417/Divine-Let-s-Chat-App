@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Let's Chat</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/12.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.9.0/firebase-auth-compat.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="https://img.freepik.com/free-vector/chat-logo-design_93835-108.jpg" class="logo-small" alt="">
+                <h3>Let's Chat</h3>
+            </div>
+
+            <div class="user-info">
+                <h1> Welcome <span id="forUserName"> loading... </span> </h1>
+            </div>
+
+            <div class="room-controls">
+                <input type="text" id="room-name" placeholder="Room name...">
+                <button onclick="addRoom()" class="add-room-btn">Create Room +</button>
+            </div>
+
+            <div id="room-list" class="rooms-container">
+            </div>
+
+            <button onclick="logUserOut()" class="logout-btn">Logout 🚪</button>
+        </aside>
+
+        <main class="chat-window">
+            <header class="chat-header">
+                <h2 id="current-room-name"># Select a Room</h2>
+            </header>
+
+            <div id="output" class="message-screen">
+                <div class="msg-example">Please select a room to start gist! 👋</div>
+            </div>
+
+            <footer class="input-area">
+                <input type="text" id="msg" placeholder="Write message...">
+                <button onclick="sendMsg()" class="send-btn">Send ✈️</button>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>
+<script src="./javascript/dashboard.js"></script>

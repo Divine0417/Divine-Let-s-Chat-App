@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <title>Login | Let's Chat</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/12.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.9.0/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1 class="header"> Welcome Back To Let's Chat</h1>
+        <div align="center" class="main-box">
+            <div class="login-div" id="div">
+                <img src="https://img.freepik.com/free-vector/chat-logo-design_93835-108.jpg" class="logo" alt="">
+                <h3>Know your Social Group</h3>
+                <h4>Join Let's Chat today!</h4>
+                <div class="form-group">
+                    <label>User Details</label>
+                    <input type="text" id="user-name" class="form-control" placeholder="Username or Email" required>
+                    <input type="password" id="user-password" class="form-control" placeholder="Password" required>
+                </div>
+                <a id="login-button" onclick="loginUser()">Log in</a>
+                <p class="new-user">Don't have an account? <a href="signup.html">Sign up</a></p>
+                <p class="new-user"><a onclick="changePassword()">Forget password?</a></p>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
+<script src="./javascript/index.js"></script>

@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(#00008b, #008b8b);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+}
+
+#welcome-h1 {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 50px;
+    font-weight: 400;
+    padding: .5em 0 1em;
+}
+
+#Wechat {
+    /* height: 250px; */
+    width: 350px;
+    border-radius: 30px;
+    border-width: thick;
+    border-color: black;
+    border-style: solid;
+    box-shadow: 1px 2px 10px 2px #fff;
+}
+
+.btn {
+    display: block;
+    background: linear-gradient(138deg, #f08080, #20b2abaf);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 1em;
+    margin: 1.5em 0 0;
+    width: 210px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.486);
+    /* border: 2px solid #ffffff7c; */
+    /* filter */
+}
+
+.header {
+    color: yellow;
+    font-family: 'Yeon Sung';
+    font-size: 40px;
+    letter-spacing: 10px;
+    margin-top: 80px;
+    padding: 0 1em;
+}
+
+.header img {
+    width: 80px;
+    margin: auto;
+    text-align: center;
+}
+
+center {
+    padding: 1em;
+}
+
+.main-box {
+    background: rgba(255, 255, 255, 0.1);
+    --webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin: 2em 0 0;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.main-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    --webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 15px 2px #000000ad;
+}
+
+#div {
+    width: 100%;
+}
+
+.logo {
+    width: 80px;
+    border-radius: 40px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 10px 2px #fff;
+}
+
+#div h3 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em 0 0;
+}
+
+#div h4 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: .3em 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    width: 100%;
+    padding: 1em;
+}
+
+.form-group label {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: .6em 1em;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.form-group input:hover {
+    box-shadow: 0px 0px 5px 1px #000000b9;
+}
+
+#login-button {
+    display: block;
+    width: 50%;
+    border-radius: 10px;
+    padding: .8em;
+    background-color: #49bee6;
+    color: #000;
+    border: none;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    background-color: #6bc4e2ec;
+    transform: translateY(-4px);
+}
+
+.new-user {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    margin-top: 1em;
+}
+
+.new-user a {
+    color: #00008b;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.new-user a:hover {
+    color: #f4f5f6;
+    text-shadow: 0px 0px 5px #000000b9;
+}
+
+/* Dashboard Css*/
+.dashboard-body {
+    height: 100%;
+    font-family: 'Yeon Sung', cursive;
+    overflow: hidden;
+}
+.app-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.sidebar {
+    width: 280px;
+    background: linear-gradient(#1d75cd, #2c3e50);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.logo-small {
+    width: 50px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 8px 2px #ffffffbb;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.room-controls input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: none;
+}
+.add-room-btn {
+    width: 100%;
+    background: #27ae60;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.add-room-btn:hover {
+    background: #16d164;
+    outline: 1px solid #ffffffad;
+}
+.rooms-container {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #e5ddd5;
+}
+.chat-header {
+    background: #fdfdfd;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.message-screen {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.input-area {
+    background: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+.input-area input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.send-btn {
+    padding: 0 25px;
+    background: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.send-btn:hover {
+    background: #4396e4;
+    outline: 1px solid #000;
+}
+.logout-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.logout-btn:hover {
+    background: #e6230e;
+    outline: 1px solid #ffffffad;
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        font-size: 28px; 
+        margin-top: 40px; 
+        letter-spacing: 5px;
+    }
+
+    #welcome-h1 {
+        font-size: 35px;
+        padding: 0.5em 0;
+    }
+
+    #Wechat {
+        width: 80%; 
+    }
+
+    .main-box {
+        width: 90%; 
+        padding: 1.5rem;
+        margin-top: 1em;
+    }
+
+    .form-group input {
+        font-size: 14px; 
+    }
+
+    .app-wrapper {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .rooms-container {
+        display: flex; 
+        overflow-x: auto;
+        gap: 10px;
+        height: 60px;
+    }
+}
