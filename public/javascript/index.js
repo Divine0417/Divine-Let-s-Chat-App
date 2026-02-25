@@ -98,6 +98,37 @@ function loginUser() {
     }
 }
 
+
+var provider = new firebase.auth.GoogleAuthProvider();
+
+function googleLogin() {
+    auth.signInWithPopup(provider)
+        .then((result) => {
+            /** @type {firebase.auth.OAuthCredential} */
+            var credential = result.credential;
+
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            console.log(user);
+            alert(`Login Successful! Welcome to Let's Chat`)
+            window.location.href = `../public/dashboard.html`
+            
+        }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            console.log(errorMessage, email, credential);
+            
+            alert(`Login Failed! ${errorMessage}`)
+        });
+}
+
 function changePassword() {
     let conAction = confirm(`A reset email link will be send to your account`)
     // window.location.href = `../public/forget.html`
